@@ -1,6 +1,10 @@
 const express = require('express');
-const ejs = require('ejs');
 const app = express();
+const ejs = require('ejs');
+const bodyParser = require('body-parser');
+const express_Session = require('express-session');
+const Uuid = require("uuid");
+
 const PORT = 3000;
 
 ///get route 
