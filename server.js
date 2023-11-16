@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path  = require('path');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const express_Session = require('express-session');
@@ -13,6 +14,8 @@ app.get("/",(req,res)=>{
 })
 
 app.set('view engine', 'ejs')
+app.use('/static',express.static(path.join(__dirname,'public')))
+app.use('/assets',express.static(path.join(__dirname, 'public/assets')))
 
 app.listen(PORT,(req,res)=>{
     console.log(`Server is started at ${3000} port`);
