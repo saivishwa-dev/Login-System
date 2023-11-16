@@ -14,8 +14,8 @@ app.get("/",(req,res)=>{
 })
 
 app.set('view engine', 'ejs')
-app.use('/static',express.static(path.join(__dirname,'public')))
-app.use('/assets',express.static(path.join(__dirname, 'public/assets')))
+app.use('/static',express.static(path.join(__dirname,'public'))) //to load the css static files 
+app.use('/assets',express.static(path.join(__dirname, 'public/assets'))) //to load the background image statif file 
 
 app.listen(PORT,(req,res)=>{
     console.log(`Server is started at ${3000} port`);
